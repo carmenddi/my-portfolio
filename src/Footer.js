@@ -1,7 +1,8 @@
 import React from 'react';
-import Phone from './images/phone.png'
-import Email from './images/email.png'
-import Linkedin from './images/linkedin.png'
+import Phone from './images/phone.png';
+import Email from './images/email.png';
+import Linkedin from './images/linkedin.png';
+import GitHub from './images/github.png'
 
 export default function Footer () {
     return (
@@ -15,6 +16,10 @@ export default function Footer () {
             <li>
               <img src={Linkedin} alt='Linkedin icon'/>
               <a href='https://www.linkedin.com/in/carmen-d-arca/' target='_blank' rel="noreferrer">Linkedin</a>
+            </li>
+            <li>
+              <img src={GitHub} alt='GitHub icon'/>
+              <a href='https://github.com/carmenddi' target='_blank' rel="noreferrer">GitHub</a>
             </li>
             <li>
               <img src={Phone} alt='phone icon'/>

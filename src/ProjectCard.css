@@ -84,7 +84,7 @@
 
 /*Responsive - Smartphone*/
 
-@media screen and (min-width: 0px) and (max-width: 768px) {
+@media screen and (min-width: 0px) and (max-width: 767px) {
 
 .projects-container {
   display: block;
@@ -109,18 +109,22 @@
 .view-more-btn {
   width: 20vw;
   padding: 0.3;
-  font-size: 2.1vw;
+  font-size: 2vw;
   font-weight: bold;
   background-color: inherit;
   border: 1.5px solid #a9758b;
   opacity: 1;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
+}
+
+.project-title {
+  font-size: 1rem;
 }
 
 }
 
 /*Responsive - Tablet*/
-@media screen and (min-width: 769px) and (max-width: 1024px) {
+@media screen and (min-width: 768px) and (max-width: 1024px) {
 
   .projects-container {
     display: block;
@@ -152,5 +156,9 @@
     border: 1.5px solid #a9758b;
     opacity: 1;
     margin-bottom: 3rem;
+  }
+
+  .project-title {
+    font-size: 2rem;
   }
 }

@@ -18,10 +18,10 @@
 }
 
 .elements {
-  position: absolute; /* Posizionamento assoluto sopra l'immagine */
+  position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%); /* Centro esattamente il contenuto al centro dell'immagine */
+  transform: translate(-50%, -50%);
   text-align: center;
 }
 
@@ -117,7 +117,7 @@
   margin-bottom: 2rem;
 }
 
-.project-title {
+.project-title, .project-card:hover p {
   font-size: 1rem;
 }
 
@@ -158,7 +158,7 @@
     margin-bottom: 3rem;
   }
 
-  .project-title {
+  .project-title, .project-card:hover p {
     font-size: 2rem;
   }
 }

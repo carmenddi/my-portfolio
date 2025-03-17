@@ -216,7 +216,7 @@ html {
  .contacts {
    display: flex;
    justify-content: center;
-   gap: 8rem;
+   gap: 6rem;
    margin: 4rem 0;
  }
 

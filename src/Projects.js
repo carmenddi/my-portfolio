@@ -11,7 +11,7 @@ export default function Projects () {
   const isVisible = useInView(projectsRef);
   const projectData = [
     { image: beyondWatches, title: "Beyond Watches", link: 'https://beyondwatchesbw.com' },
-    { image: littleLemon, title: "Little Lemon", link:'https://67a79d827adb5c00080c33be--projectlittlelemon.netlify.app/' },
+    { image: littleLemon, title: "Little Lemon", link:'https://projectlittlelemon.netlify.app/' },
     { image: halfmoon, title: "Halfmoon", link: 'https://carmenddi.github.io/halfmoon/' },
     { image: hairDay, title: "Hair Day", link: 'https://projecthairday.netlify.app' }
   ];

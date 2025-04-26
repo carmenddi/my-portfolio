@@ -2,41 +2,36 @@ import React, { useState, useEffect } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
 
 export default function Nav() {
-  const [isOpen, setIsOpen] = useState(false); // Sidebar state
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768); // State to track if the screen is mobile/tablet
+  const [isOpen, setIsOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
-  // Function to toggle sidebar
   const toggleSidebar = () => {
-    setIsOpen((prevState) => !prevState); // Toggle the state
+    setIsOpen((prevState) => !prevState);
   };
 
-  // Function to handle window resizing
   const handleResize = () => {
     if (window.innerWidth > 768) {
-      setIsOpen(false); // Automatically close sidebar on desktop view
+      setIsOpen(false);
     }
-    setIsMobile(window.innerWidth <= 768); // Update mobile state
+    setIsMobile(window.innerWidth <= 768);
   };
 
-  // Add event listener for screen resize
   useEffect(() => {
     window.addEventListener('resize', handleResize);
     return () => {
-      window.removeEventListener('resize', handleResize); // Clean up the event listener
+      window.removeEventListener('resize', handleResize);
     };
   }, []);
 
   return (
     <>
       <nav className="nav-bar">
-        {/* Hamburger icon only for mobile/tablet */}
         {isMobile && (
           <div className="hamburger-icon" onClick={toggleSidebar}>
-            {isOpen ? <FaTimes /> : <FaBars />} {/* FaTimes when open, FaBars when closed */}
+            {isOpen ? <FaTimes /> : <FaBars />}
           </div>
         )}
 
-        {/* Regular nav-links only for desktop */}
         {!isMobile && (
           <ul className="nav-links">
             <li><a href="#/App">Home</a></li>
@@ -46,10 +41,8 @@ export default function Nav() {
           </ul>
         )}
 
-        {/* Sidebar only for mobile */}
         {isMobile && (
           <div className={`sidebar ${isOpen ? 'active' : ''}`}>
-            {/* Close icon inside the sidebar but positioned absolutely */}
             <div className="close-icon" onClick={toggleSidebar}>
             </div>
             <ul className="nav-links">

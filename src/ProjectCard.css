@@ -1,64 +1,82 @@
 .projects-container {
-  display: grid;
-  grid-auto-flow: column;
-  gap: 3rem;
-  align-items: center;
-  justify-content: center;
+  display: block;
+  max-width: 80vw;
+  margin: 0 auto;
 }
 
 .project-card {
-  position: relative;
-  max-width: 80vw;
   display: flex;
-  align-items: center;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: stretch;
+  margin-top: 1.5rem;
   overflow: hidden;
-  transition: transform 0.3s ease;
   border-radius: 1rem;
+  box-shadow: 0.5px 0.5px 0.5px black, 0 0 2.5px #5a8f7b;
+  gap: 2rem;
+}
+
+.project-card:hover {
+  box-shadow: 0.5px 0.5px 0.5px black, 0 0 4px #5a8f7b;
+}
+
+.project-card img {
+  width: 20vw;
+  flex-shrink: 0;
+  border-radius: 1rem;
+  object-fit: cover;
 }
 
 .elements {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 1.5rem 0;
+  gap: 1rem;
 }
 
-/* Style for the image */
-.project-card img {
-  width: 20vw;
-  border-radius: 1rem;
-  opacity: 0.25;
-}
-
-/* Centered project title */
+/* Titolo */
 .project-title {
   color: #5a8f7b;
   font-family: "blockhead-black-face", sans-serif;
   font-weight: 400;
   font-size: 2.5rem;
-  z-index: 2;
+  margin: 0;
+  text-align: left;
 }
 
-/* Button styling */
+/* Descrizione */
+.project-description {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  text-align: left;
+  margin: 1rem 0;
+  width: 100%;
+  flex-grow: 1;
+}
+
+/* Bottone */
 .view-more-btn {
-  width: 10rem;
-  padding: 0.5rem;
+  align-self: flex-start;
+  width: auto;
+  padding: 0.5rem 1rem;
   font-size: 1.2rem;
   font-weight: bold;
   background-color: inherit;
-  border: 2px solid #a9758b;
+  border: 1.5px solid #a9758b;
   border-radius: 20px;
   cursor: pointer;
-  opacity: 0;
-  margin-bottom: 1rem;
-  transition: opacity 0.3s ease;
-  z-index: 2; /* the button is above the image */
+  transition: all 0.3s ease;
+  z-index: 2;
+  color: white;
+}
+
+.view-more-btn a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .view-more-btn:hover {
-  background: linear-gradient(to right, #a9758b, #8b5866); /* Gradiente laterale sul hover */
+  background: linear-gradient(to right, #a9758b, #8b5866);
   color: white;
 }
 
@@ -68,97 +86,48 @@
   color: white;
 }
 
-/* Show button on hover */
-.project-card:hover .view-more-btn {
-  opacity: 1; /* Button visible on hover */
-}
-
-.project-card:hover p {
-  font-size:2.6rem;
-  transition: 0.5s ease;
-}
-
-.project-card:hover {
-  box-shadow: 0.5px 0.5px 1px black, 0 0 19px #5a8f7b;
-}
-
-/*Responsive - Smartphone*/
-
-@media screen and (min-width: 0px) and (max-width: 767px) {
-
-.projects-container {
-  display: block;
-}
-
-.project-card {
-  display: flex;
-  justify-content: left;
-  flex-direction: row;
-  margin-top: 1.5rem;
-  box-shadow: 0.5px 0.5px 0.5px black, 0 0 12px #5a8f7b;
-}
-
-.project-card img {
-  opacity: 1;
-}
-
-.elements {
-  margin-left: 2rem;
-}
-
-.view-more-btn {
-  width: 20vw;
-  padding: 0.3;
-  font-size: 2vw;
-  font-weight: bold;
-  background-color: inherit;
-  border: 1.5px solid #a9758b;
-  opacity: 1;
-  margin-bottom: 2rem;
-}
-
-.project-title, .project-card:hover p {
-  font-size: 1rem;
-}
-
-}
-
-/*Responsive - Tablet*/
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-
+/* --- Responsive: Smartphone e Tablet --- */
+@media screen and (max-width: 1024px) {
   .projects-container {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: center;
+    justify-content: center;
+    max-width: 80%;
   }
 
   .project-card {
-    display: flex;
-    align-items: left;
-    justify-content: left;
-    flex-direction: row;
-    margin-top: 1rem;
-    box-shadow: 0.5px 0.5px 0.5px black, 0 0 12px #5a8f7b;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0.5px 0.5px 0.5px black, 0 0 2.5px #5a8f7b;
   }
 
   .project-card img {
-    opacity: 1;
+    width: 100%;
+
   }
 
   .elements {
-    margin-left: 2.5rem;
+    width: 90%;
+    align-items: center;
+  }
+
+  .project-title,
+  .project-description {
+    text-align: center;
   }
 
   .view-more-btn {
-    width: 22vw;
+    align-self: center;
+    width: 15rem;
+    margin-top: 1rem;
     padding: 0.7rem;
-    font-size: 1.2rem;
-    font-weight: bold;
-    background-color: inherit;
-    border: 1.5px solid #a9758b;
-    opacity: 1;
-    margin-bottom: 3rem;
+    font-size: 1.5rem;
   }
 
-  .project-title, .project-card:hover p {
-    font-size: 2rem;
+  .project-description {
+    font-size: 1.8rem;
   }
 }

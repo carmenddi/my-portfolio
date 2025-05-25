@@ -20,6 +20,7 @@ html {
 
  li a:hover {
    color:#a9758d;
+   transition: color 0.5s ease;
  }
 
  a {

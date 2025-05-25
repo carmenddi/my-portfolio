@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import useInView from './hooks/useInView';
 import ProjectCard from './ProjectCard';
 import beyondWatches from './images/beyondwatches.png';
-import littleLemon from './images/littlelemon.jpg';
+import littleLemon from './images/littlelemon.jpeg';
 import halfmoon from './images/halfmoon.jpg';
 import hairDay from './images/hairday.png';
 
